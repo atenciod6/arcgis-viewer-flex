@@ -7,35 +7,53 @@
 ////////////////////////////////////////////////////////////////////////////////
 -->
 <configuration>
-    <title>ArcGIS Viewer for Flex</title>
-    <subtitle>a configurable web mapping application</subtitle>
-    <logo>assets/images/logo.png</logo>
+
+    <title>Geohidro V2.00</title>
+    <subtitle>Sistema Nacional de Información de Recursos Hídricos</subtitle>
+    <logo>assets/images/logo2.png</logo>
     <style>
-        <colors>0xFFFFFF,0x333333,0x101010,0x000000,0xFFD700</colors>
-        <alpha>0.8</alpha>
+        <colors>0xcee7f4,0x39628c,0x355d89,0x294867,0xffffff</colors>
+        <alpha>0.54</alpha>
+        <font name="Arial Rounded MT Bold"/>
+        <titlefont name="Arial TUR"/>
+        <subtitlefont name="Arial TUR"/>
     </style>
     <!-- replace the following url with your own geometryservice -->
     <geometryservice url="http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer" />
+
+
 
     <!-- UI elements -->
     <widget left="10"  top="50"    config="widgets/Navigation/NavigationWidget.xml" url="widgets/Navigation/NavigationWidget.swf"/>
     <widget right="0" bottom="0"   config="widgets/OverviewMap/OverviewMapWidget.xml" url="widgets/OverviewMap/OverviewMapWidget.swf"/>
     <widget right="20" top="55"    config="widgets/MapSwitcher/MapSwitcherWidget.xml" url="widgets/MapSwitcher/MapSwitcherWidget.swf"/>
     <widget left="0"   top="0"     config="widgets/HeaderController/HeaderControllerWidget.xml" url="widgets/HeaderController/HeaderControllerWidget.swf"/>
-
-    <map wraparound180="true" initialextent="-14083000 3139000 -10879000 5458000" fullextent="-20000000 -20000000 20000000 20000000" top="40" addarcgisbasemaps="true">
+	<widget left="3" bottom="1"	   config="widgets/Coordinate/CoordinateWidget.xml" url="widgets/Coordinate/CoordinateWidget.swf"/>
+    <map scalebarvisible="true" scalebar="metric" wraparound180="true" initialextent="-11499000 -2341000 -5120000 188000" wkid="102100" top="40" addarcgisbasemaps="true"
+    attributionvisible="false" esrilogovisible="false" >
+    
+    <basemaps>
+   <layer type="tiled" label="Calles" icon="https://www.arcgis.com/sharing/rest/content/items/04e903465a3e497aa669212e08927cee/info/thumbnail/world_street_map.jpg" url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" visible="true"/>
+	</basemaps>
         <operationallayers>
-            <layer label="Demographics" type="tiled" visible="false" alpha="0.5"
-                   url="http://server.arcgisonline.com/ArcGIS/rest/services/Demographics/USA_Median_Household_Income/MapServer">
-                <sublayer id="1" popupconfig="popups/PopUp_Demographics_BlockGroups.xml"/>
-                <sublayer id="2" popupconfig="popups/PopUp_Demographics_Tracts.xml"/>
-                <sublayer id="3" popupconfig="popups/PopUp_Demographics_Counties.xml"/>
-                <sublayer id="4" popupconfig="popups/PopUp_Demographics_States.xml"/>
-            </layer>
-            <layer label="Fires" type="feature" visible="false" alpha="1.0"
-                   popupconfig="popups/PopUp_Fires.xml"
-                   url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0"/>
+<!--             <layer label="Demographics" type="tiled" visible="false" alpha="0.5" -->
+<!--                    url="http://server.arcgisonline.com/ArcGIS/rest/services/Demographics/USA_Median_Household_Income/MapServer"> -->
+<!--                 <sublayer id="1" popupconfig="popups/PopUp_Demographics_BlockGroups.xml"/> -->
+<!--                 <sublayer id="2" popupconfig="popups/PopUp_Demographics_Tracts.xml"/> -->
+<!--                 <sublayer id="3" popupconfig="popups/PopUp_Demographics_Counties.xml"/> -->
+<!--                 <sublayer id="4" popupconfig="popups/PopUp_Demographics_States.xml"/> -->
+<!--             </layer> -->
+<!--             <layer label="Fires" type="feature" visible="false" alpha="1.0" -->
+<!--                    popupconfig="popups/PopUp_Fires.xml" -->
+<!--                    url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0"/> -->
+			<layer type="dynamic" label="Base" imageformat="png8" url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_base/MapServer" visible="true"/>
+
+        	<layer label="Externos" type="dynamic" visible="false" imageformat="png8"
+        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_externos/MapServer" />
+        	<layer label="Estudios temáticos" type="dynamic" visible="false" imageformat="png8"
+        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_tematicos/MapServer" />
         </operationallayers>
+   
     </map>
 
     <!-- widgets organized into widget containers that manage close/open etc -->
@@ -49,7 +67,7 @@
                 icon="assets/images/i_police.png"
                 config="widgets/Query/QueryWidget_Louisville_PoliceStations.xml"
                 url="widgets/Query/QueryWidget.swf"/>
-        <widget label="Search" left="80" top="280"
+        <widget label="Buscar" left="80" top="280"
                 icon="assets/images/i_search.png"
                 config="widgets/Search/SearchWidget_Louisville.xml"
                 url="widgets/Search/SearchWidget.swf"/>
@@ -57,21 +75,32 @@
                 icon="assets/images/i_rss.png"
                 config="widgets/GeoRSS/GeoRSSWidget.xml"
                 url="widgets/GeoRSS/GeoRSSWidget.swf"/>
-        <widget label="Draw" left="60" top="400"
+        <widget label="Dibujar" left="60" top="400"
                 icon="assets/images/i_draw2.png"
                 config="widgets/Draw/DrawWidget.xml"
                 url="widgets/Draw/DrawWidget.swf"/>
-        <widget label="Print" left="390" top="400"
+        <widget label="Imprimir" left="390" top="400"
                 icon="assets/images/i_print.png"
                 config="widgets/Print/PrintWidget.xml"
                 url="widgets/Print/PrintWidget.swf"/>
-
-        <!--
-        <widget label="My first widget"
-                icon="assets/images/i_widget.png"
+        <widget label="Cargar shapefile" left="390" top="400"
+                icon="widgets/ShapeFiles/assets/images/shapefiles.png"
+                config="widgets/ShapeFiles/ShapeFilesWidget.xml"
+                url="widgets/ShapeFiles/ShapeFilesWidget.swf"/>
+		<widget label="Lista de capas" right="20" top="100"
+        		config="widgets/LayerList/LayerListWidget.xml"
+        		url="widgets/LayerList/LayerListWidget.swf"
+        		icon="assets/images/i_layers.png" preload="open"/>
+		<widget label="Facebook" left="300" top="500"
+                icon="assets/images/i_facebook.png"
+                config="widgets/Samples/TestWidget/TestWidget.xml"
+                url="widgets/Samples/TestWidget/TestWidget.swf"/>
+		<widget label="Tweeter" left="390" top="200"
+                icon="assets/images/i_tweeter.png"
                 config="widgets/Samples/HelloWorld/HelloWorldWidget.xml"
                 url="widgets/Samples/HelloWorld/HelloWorldWidget.swf"/>
-        -->
+        
+                
     </widgetcontainer>
     
 </configuration>
