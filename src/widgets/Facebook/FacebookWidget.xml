@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<configuration label="Esri Globe">
+    <imageurl>assets/images/i_facebook.png</imageurl>
+    <linkurl>https://es-la.facebook.com/autoridadnacionaldelagua</linkurl>
+    <tooltip>Facebook</tooltip>
+</configuration>
+
+<!--
+    See Static Image widget tag reference at
+    http://links.esri.com/staticimagewidget
+-->

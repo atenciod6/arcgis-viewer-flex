@@ -12,33 +12,34 @@
 		<simplelinesymbol color="0x088802" alpha="0.8" width="2" style="solid"/>
 		<TextSymbol color="0x000000" size="12" bold="false" italics="false" underline="false" font="Verdana"/>
 	</symbols>
-<!-- 	<labels> -->
-<!-- 		<textplacementmiddle>Middle</textplacementmiddle> -->
-<!-- 		<textplacementabove>Above</textplacementabove> -->
-<!-- 		<textplacementbelow>Below</textplacementbelow> -->
-<!-- 		<textplacementend>End</textplacementend> -->
-<!-- 		<textplacementstart>Start</textplacementstart> -->
-<!-- 		<textboldlabel>B</textboldlabel> -->
-<!-- 		<textboldtooltip>Bold</textboldtooltip> -->
-<!-- 		<textitaliclabel>I</textitaliclabel> -->
-<!-- 		<textitalictooltip>Italics</textitalictooltip> -->
-<!-- 		<textunderlinelabel>U</textunderlinelabel> -->
-<!-- 		<textunderlinetooltip>Underline</textunderlinetooltip> -->
-<!-- 		<instructions>To load34 a shapefile the files must be zipped.&#13;&#13;At a minimum there must be 2 files in the zip, 1 .shp, 1 .dbf, and an optional .prj file.&#13;&#13;Click the button below to upload a shapefile from your computer.&#13;&#13;To change symbology and other preferences click on the wrench icon above.</instructions> -->
-<!-- 		<loadbutton>Load Local Shapefile...</loadbutton> -->
-<!-- 		<addbutton>Load Shapefile</addbutton> -->
-<!-- 		<optionsbutton>Preferences</optionsbutton> -->
-<!-- 		<readingmessage>Reading shapefile</readingmessage> -->
-<!-- 		<reprojectingmessage>Reprojecting</reprojectingmessage> -->
-<!-- 		<numberoffeaturesmessage>Number of Features:</numberoffeaturesmessage> -->
-<!-- 		<addedmessage>Added Shapefiles:</addedmessage> -->
-<!-- 		<addlabels>Label Features</addlabels> -->
-<!--         <fieldlabel>Label Field</fieldlabel> -->
-<!-- 		<labelplacement>Label placement</labelplacement> -->
-<!-- 		<includeoutline>Include Outline</includeoutline> -->
-		This is the text that is appended to the beginning of the zipfile name to indicate the shapefiles labels in the TOC
-<!-- 		<labelstexttoadd>Labels</labelstexttoadd> -->
-<!--         <configresultmessage>Configure Shapefile</configresultmessage> -->
-<!--         <removeresultmessage>Remove Shapefile</removeresultmessage> -->
-<!-- 	</labels> -->
+<!-- 	Se tradujo todas las etiquetas, no se puedo usar locale es_ES -->
+	<labels> 
+		<textplacementmiddle>Mitad</textplacementmiddle>
+		<textplacementabove>Arriba</textplacementabove>
+		<textplacementbelow>Abajo</textplacementbelow>
+		<textplacementend>Fin</textplacementend>
+		<textplacementstart>Inicio</textplacementstart>
+		<textboldlabel>B</textboldlabel>
+		<textboldtooltip>Bold</textboldtooltip>
+		<textitaliclabel>I</textitaliclabel>
+		<textitalictooltip>Italics</textitalictooltip>
+		<textunderlinelabel>U</textunderlinelabel>
+		<textunderlinetooltip>Underline</textunderlinetooltip>
+		<instructions>Para cargar un shapefile el archivo debe estar zipeado.&#13;&#13;Deberá tener mínimamente 2 archivos en el zip, 1 .shp, 1 .dbf, y 1 archivo opcional .prj.&#13;&#13;Dar click al boton de abajo para cargar un shapefile de su computadora.&#13;&#13;Para cambiar la simbología y otras preferencias dar click en icono de la llave inglesa de arriba.</instructions>
+		<loadbutton>Cargar Shapefile local...</loadbutton>
+		<addbutton>Cargar Shapefile</addbutton>
+		<optionsbutton>Preferencias</optionsbutton>
+		<readingmessage>Leyendo shapefile</readingmessage>
+		<reprojectingmessage>Reproyectando</reprojectingmessage>
+		<numberoffeaturesmessage>Númbero de Features:</numberoffeaturesmessage>
+		<addedmessage>Adicionar Shapefiles:</addedmessage>
+		<addlabels>Label Features</addlabels>
+        <fieldlabel>Label Field</fieldlabel>
+		<labelplacement>Ubicación de etiqueta</labelplacement>
+		<includeoutline>Incluir línea externa</includeoutline>
+<!-- 		This is the text that is appended to the beginning of the zipfile name to indicate the shapefiles labels in the TOC -->
+		<labelstexttoadd>Etiqeutas</labelstexttoadd>
+        <configresultmessage>Configurar Shapefile</configresultmessage>
+        <removeresultmessage>Eliminar Shapefile</removeresultmessage>
+	</labels>
 </configuration>

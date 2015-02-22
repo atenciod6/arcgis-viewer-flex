@@ -1,8 +1,13 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <configuration>
-    <layerlist visible="true">
-        <!-- <excludelayer>The Label Of Some Layer In Main Config File</excludelayer> -->
-    </layerlist>
+    <layerlist visible="false"/>
+    <labels>
+        <layerlistlabel>Mucho</layerlistlabel>
+        <basemapslabel>Mapa base</basemapslabel>
+    </labels>
+    <showthumbnails>true</showthumbnails>
+    <includelegenditems>false</includelegenditems>
+    <expandlayeritems>true</expandlayeritems>
 </configuration>
 
 <!--

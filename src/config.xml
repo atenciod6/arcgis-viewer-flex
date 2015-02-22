@@ -8,12 +8,12 @@
 -->
 <configuration>
 
-    <title>Geohidro V2.00</title>
+       <title>..:: GeoHidro v2.0 ::..</title>
     <subtitle>Sistema Nacional de Información de Recursos Hídricos</subtitle>
     <logo>assets/images/logo2.png</logo>
     <style>
-        <colors>0xcee7f4,0x39628c,0x355d89,0x294867,0xffffff</colors>
-        <alpha>0.54</alpha>
+        <colors>0xcee7f4,0x39628c,0x355d89,0x294867,0xcee7f4</colors>
+        <alpha>0.8</alpha>
         <font name="Arial Rounded MT Bold"/>
         <titlefont name="Arial TUR"/>
         <subtitlefont name="Arial TUR"/>
@@ -21,16 +21,21 @@
     <!-- replace the following url with your own geometryservice -->
     <geometryservice url="http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer" />
 
-
-
     <!-- UI elements -->
     <widget left="10"  top="50"    config="widgets/Navigation/NavigationWidget.xml" url="widgets/Navigation/NavigationWidget.swf"/>
     <widget right="0" bottom="0"   config="widgets/OverviewMap/OverviewMapWidget.xml" url="widgets/OverviewMap/OverviewMapWidget.swf"/>
     <widget right="20" top="55"    config="widgets/MapSwitcher/MapSwitcherWidget.xml" url="widgets/MapSwitcher/MapSwitcherWidget.swf"/>
-    <widget left="0"   top="0"     config="widgets/HeaderController/HeaderControllerWidget.xml" url="widgets/HeaderController/HeaderControllerWidget.swf"/>
+    <widget left="0" top="0"     config="widgets/HeaderController/HeaderControllerWidget.xml" url="widgets/HeaderController/HeaderControllerWidget.swf"/>	
 	<widget left="3" bottom="1"	   config="widgets/Coordinate/CoordinateWidget.xml" url="widgets/Coordinate/CoordinateWidget.swf"/>
-    <map scalebarvisible="true" scalebar="metric" wraparound180="true" initialextent="-11499000 -2341000 -5120000 188000" wkid="102100" top="40" addarcgisbasemaps="true"
-    attributionvisible="false" esrilogovisible="false" >
+	<widget left="240" bottom="1" config="widgets/CoordinateUtm/CoordinateUtmWidget.xml" url="widgets/CoordinateUtm/CoordinateUtmWidget.swf"/>
+	<widget right="215" top="50" url="widgets/StaticImage/StaticImageWidget.swf" config="widgets/StaticImage/StaticImageWidget.xml" label="Imagen estática"/>
+	<widget right="263" top="50" url="widgets/Facebook/FacebookWidget.swf" config="widgets/Facebook/FacebookWidget.xml" label="Facebook"/>
+	<widget right="311" top="50" url="widgets/Youtube/YoutubeWidget.swf" config="widgets/Youtube/YoutubeWidget.xml" label="Youtube"/>
+	
+    <map scalebarvisible="true" scalebar="metric" wraparound180="true" initialextent="-11499000 -2341000 -5120000 188000" wkid="102100" top="0" addarcgisbasemaps="true"
+    attributionvisible="true" esrilogovisible="false" >
+    
+    
     
     <basemaps>
    <layer type="tiled" label="Calles" icon="https://www.arcgis.com/sharing/rest/content/items/04e903465a3e497aa669212e08927cee/info/thumbnail/world_street_map.jpg" url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" visible="true"/>
@@ -46,12 +51,18 @@
 <!--             <layer label="Fires" type="feature" visible="false" alpha="1.0" -->
 <!--                    popupconfig="popups/PopUp_Fires.xml" -->
 <!--                    url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0"/> -->
-			<layer type="dynamic" label="Base" imageformat="png8" url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_base/MapServer" visible="true"/>
+			
 
-        	<layer label="Externos" type="dynamic" visible="false" imageformat="png8"
+        	<layer label="Externos" type="dynamic" visible="false" imageformat="png8" alpha="0.5"
         			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_externos/MapServer" />
         	<layer label="Estudios temáticos" type="dynamic" visible="false" imageformat="png8"
-        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_tematicos/MapServer" />
+        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_tematicos/MapServer" >
+<!--  El widget de identificador muestra todas las leyendas, sin ser necesario este popup personalizado -->
+ <!--      	  <sublayer id="1" popupconfig="popups/PopUp_Infraestuctura.xml"/> -->
+            </layer>
+        			
+        	<layer label="Base" type="dynamic" visible="true" imageformat="png8"
+        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_base/MapServer"/>
         </operationallayers>
    
     </map>
@@ -59,47 +70,65 @@
     <!-- widgets organized into widget containers that manage close/open etc -->
     <!-- supported layout property options: horizontal(default)|float|vertical|fix-->
     <widgetcontainer layout="float">
-        <widget label="Bookmarks"         left="430" top="90"
+      <widgetgroup label="Locators">
+        <widget label="Marcadores" left="430" top="90"
                 icon="assets/images/i_bookmark.png"
                 config="widgets/Bookmark/BookmarkWidget.xml"
                 url="widgets/Bookmark/BookmarkWidget.swf"/>
-        <widget label="Louisville Police" left="590" top="280"
-                icon="assets/images/i_police.png"
-                config="widgets/Query/QueryWidget_Louisville_PoliceStations.xml"
-                url="widgets/Query/QueryWidget.swf"/>
         <widget label="Buscar" left="80" top="280"
                 icon="assets/images/i_search.png"
                 config="widgets/Search/SearchWidget_Louisville.xml"
                 url="widgets/Search/SearchWidget.swf"/>
-        <widget label="Earthquakes (GeoRSS)" left="410" top="280"
-                icon="assets/images/i_rss.png"
-                config="widgets/GeoRSS/GeoRSSWidget.xml"
-                url="widgets/GeoRSS/GeoRSSWidget.swf"/>
         <widget label="Dibujar" left="60" top="400"
                 icon="assets/images/i_draw2.png"
                 config="widgets/Draw/DrawWidget.xml"
                 url="widgets/Draw/DrawWidget.swf"/>
-        <widget label="Imprimir" left="390" top="400"
+        </widgetgroup>
+        <widget url="widgets/Legend/LegendWidget.swf" left="150" top="280"
+       			config="widgets/Legend/LegendWidget.xml"
+       			label="Leyenda" icon="assets/images/Legend32.png"/>
+       	<widget label="Localizador" left="350" top="240"
+                icon="assets/images/i_target.png"
+                config="widgets/Locate/LocateWidget.xml"
+                url="widgets/Locate/LocateWidget.swf"/>
+        <widget label="Imprimir" left="300" top="140"
                 icon="assets/images/i_print.png"
                 config="widgets/Print/PrintWidget.xml"
                 url="widgets/Print/PrintWidget.swf"/>
-        <widget label="Cargar shapefile" left="390" top="400"
+        <widget label="Cargar shapefile" left="100" top="100"
                 icon="widgets/ShapeFiles/assets/images/shapefiles.png"
                 config="widgets/ShapeFiles/ShapeFilesWidget.xml"
                 url="widgets/ShapeFiles/ShapeFilesWidget.swf"/>
-		<widget label="Lista de capas" right="20" top="100"
-        		config="widgets/LayerList/LayerListWidget.xml"
-        		url="widgets/LayerList/LayerListWidget.swf"
-        		icon="assets/images/i_layers.png" preload="open"/>
+        <widget label="Consulta presas" left="250" top="140"
+                icon="assets/images/GenericSearch32.png"
+                config="widgets/Query/QueryWidget.xml"
+                url="widgets/Query/QueryWidget.swf"/>
+        <widget label="Identificador" left="250" top="120"
+        		config="widgets/identify/identifyWidget.xml"
+        		url="widgets/identify/identifyWidget.swf"
+        		icon="widgets/identify/assets/images/i_info.png"/>
+        <widget label="Extraer datos" left="280" top="160" height="170"
+        		config="widgets/DataExtract/DataExtractWidget.xml"
+        		url="widgets/DataExtract/DataExtractWidget.swf"
+        		icon="assets/images/i_scissors.png"/>
+       	<widget label="Últimos sismos - USGS" left="280" top="160"
+        		config="widgets/GeoRSS/GeoRSSWidget.xml"
+        		url="widgets/GeoRSS/GeoRSSWidget.swf"
+        		icon="assets/images/i_rss.png"/>
+        <widget label="Lista de capas" right="20" top="100" height="500"
+        		config="widgets/eLayerList/eLayerListWidget.xml"
+        		url="widgets/eLayerList/eLayerListWidget.swf"
+        		icon="widgets/eLayerList/assets/images/i_folder.png" preload="open"/>
+        <widget label="Perfil de elevación" right="200" top="300"
+        		config="widgets/ElevationProfile/ElevationProfileWidget.xml"
+        		url="widgets/ElevationProfile/ElevationProfileWidget.swf"
+        		icon="widgets/ElevationProfile/images/i_widget.png"/>
+        		
+<!--Este widget es para capturar las coordendas del click -->
 		<widget label="Facebook" left="300" top="500"
                 icon="assets/images/i_facebook.png"
                 config="widgets/Samples/TestWidget/TestWidget.xml"
                 url="widgets/Samples/TestWidget/TestWidget.swf"/>
-		<widget label="Tweeter" left="390" top="200"
-                icon="assets/images/i_tweeter.png"
-                config="widgets/Samples/HelloWorld/HelloWorldWidget.xml"
-                url="widgets/Samples/HelloWorld/HelloWorldWidget.swf"/>
-        
                 
     </widgetcontainer>
     

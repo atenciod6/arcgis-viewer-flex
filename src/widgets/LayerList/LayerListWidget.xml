@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <configuration>
+    <includelegenditems>true</includelegenditems>
+    <expandlayeritems>true</expandlayeritems>
 </configuration>
 
 <!--

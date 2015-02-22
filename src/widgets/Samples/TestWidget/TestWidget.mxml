@@ -17,13 +17,14 @@
 ///////////////////////////////////////////////////////////////////////////
 -->
 <viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009"
-                   xmlns:s="library://ns.adobe.com/flex/spark"
-                   xmlns:mx="library://ns.adobe.com/flex/mx"
-                   xmlns:viewer="com.esri.viewer.*"
-                   widgetConfigLoaded="init()">
+				   xmlns:s="library://ns.adobe.com/flex/spark"
+				   xmlns:mx="library://ns.adobe.com/flex/mx"
+				   xmlns:viewer="com.esri.viewer.*">
     <fx:Script>
         <![CDATA[
 			import com.esri.ags.events.MapMouseEvent;
+			import com.esri.ags.geometry.MapPoint;
+			
             //this function called when the widget's configuration is loaded
             private function init():void
             {
@@ -33,14 +34,24 @@
                 }
             }
 			
-			
 			protected function helloWorld_openHandler(event:Event):void
 			{
 				map.addEventListener(MapMouseEvent.MAP_CLICK, mapClicked);
+	/* 			map.addEventListener(MouseEvent.MOUSE_MOVE, map_mouseMovedHandler); */
 			}
+			
+			private function map_mouseMovedHandler(event:MapMouseEvent):void
+			{
+				scalemove.text='Scale: 1:'+ event.map.scale.toFixed(0);
+			}
+				
 			private function mapClicked(event:MapMouseEvent):void
 			{
+				
 				lbl.text='X: '+ event.mapPoint.x + '\nY: ' + event.mapPoint.y;
+				scale.text='Scale: 1:'+ event.map.scale.toFixed(0)+ event.map.level;
+					
+					/* <s:RichEditableText editable="false" text="1:{map.scale.toFixed(0)} (level {map.level})"/> */
 			}
 	
 			protected function helloWorld_closedHandler(event:Event):void
@@ -50,8 +61,10 @@
 			
 		]]>
     </fx:Script>
-    <viewer:WidgetTemplate id="helloWorld"
-                           width="300" height="300" open="helloWorld_openHandler(event)" closed="helloWorld_closedHandler(event)">
+    <viewer:WidgetTemplate id="helloWorld" width="300" height="300"
+						   open="helloWorld_openHandler(event)"
+						   closed="helloWorld_closedHandler(event)"
+						   >
         <viewer:layout>
             <s:VerticalLayout horizontalAlign="center" verticalAlign="middle"/>
         </viewer:layout>
@@ -61,5 +74,7 @@
                  fontSize="18"
                  fontStyle="italic"
                  fontWeight="bold"/>
+		<s:Label id="scale" text="Label"/>
+		<s:Label id="scalemove" text="Label2"/>
     </viewer:WidgetTemplate>
 </viewer:BaseWidget>

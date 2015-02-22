@@ -5,6 +5,12 @@
 @namespace viewer "com.esri.viewer.*";
 @namespace viewerComps "com.esri.viewer.components.*";
 @namespace apiComps "com.esri.ags.components.*";
+@namespace esri "http://www.esri.com/2008/ags";
+
+esri|ScaleBar
+{
+	skin-class: ClassReference("com.esri.ags.skins.ScaleBarMetricSkin");
+}
 
 viewer|WidgetTemplate
 {

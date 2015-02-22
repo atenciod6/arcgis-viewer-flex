@@ -1,5 +1,12 @@
 <?xml version="1.0" ?>
 <configuration>
+    <taskurl>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/Geoprocesos/ExportWebMap/GPServer/Exportar%20mapa%20Web</taskurl>
+    <title visible="true">Mapa temático</title>
+    <copyright visible="true">Autoridad Nacional del Agua</copyright>
+    <author visible="true">GeoANA</author>
+    <dpi>96</dpi>
+    <usescale visible="true"/>
+    <formats defaultvalue="PDF"/>
 </configuration>
 
 <!--

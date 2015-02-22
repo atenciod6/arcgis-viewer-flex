@@ -263,7 +263,7 @@
 				if (configXML){
 					initializeFontList();							
 					textPlacementMiddle = configXML.labels.textplacementmiddle || "Middle";
-					textPlacementAbove = configXML.labels.textplacementabove || "Above";
+					textPlacementAbove = configXML.labels.textplacementabove || "Above1";
 					textPlacementBelow = configXML.labels.textplacementbelow || "Below";
 					textPlacementEnd = configXML.labels.textplacementend || "End";
 					textPlacementStart = configXML.labels.textplacementstart || "Start";
@@ -283,7 +283,7 @@
 					textFontLabel = configXML.labels.textfontlabel || getDefaultString("textFontLabel");
 					textSizeLabel = configXML.labels.sizelabel || getDefaultString("textSizeLabel");
 					clearButtonLabel = configXML.labels.clearbuttonlabel || getDefaultString("clearLabel");
-					/* textInstructions = configXML.labels.instructions || "To2 load a shapefile the files must be zipped.\n\nAt a minimum there must be 2 files in the zip, 1 .shp, 1 .dbf, and an optional .prj file.\n\nClick the button below to upload a shapefile from your computer.\n\nTo change symbology and other preferences click on the wrench icon above."; */
+					textInstructions = configXML.labels.instructions || "To2 load a shapefile the files must be zipped.\n\nAt a minimum there must be 2 files in the zip, 1 .shp, 1 .dbf, and an optional .prj file.\n\nClick the button below to upload a shapefile from your computer.\n\nTo change symbology and other preferences click on the wrench icon above."; 
 					markerColorLabel = configXML.labels.markercolorlabel || getDefaultString("markerColorLabel");
 					markerAlphaLabel = configXML.labels.markeralphalabel || getDefaultString("markerAlphaLabel");
 					markerSizeLabel = configXML.labels.markersizelabel || getDefaultString("markerSizeLabel");

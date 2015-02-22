@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <configuration label="Esri Globe">
-    <imageurl>assets/images/globe.png</imageurl>
-    <linkurl>http://www.esri.com</linkurl>
-    <tooltip>http://www.esri.com</tooltip>
+    <imageurl>assets/images/i_tweeter.png</imageurl>
+    <linkurl>http://twitter.com/ANAPeru_</linkurl> 
+    <tooltip>Tweeter</tooltip>
 </configuration>
 
 <!--

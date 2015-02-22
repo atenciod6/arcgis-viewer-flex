@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<configuration label="Coordinates (default)">
+    <!-- geo, dms, mercator -->
+    <outputunit>mercator</outputunit>
+    <numberformatter precision="3" />
+    <labels>
+        <template>X:{1} Y:{0}</template>
+    </labels> 
+</configuration>
+
+<!--
+    See Coordinate widget tag reference at
+    http://links.esri.com/coordinatewidget
+-->

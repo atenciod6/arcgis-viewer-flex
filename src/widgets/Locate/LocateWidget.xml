@@ -1,5 +1,9 @@
 <?xml version="1.0" ?>
 <configuration>
+    <locator>https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer</locator>
+    <usesearchextent>true</usesearchextent>
+    <minscore>40</minscore>
+    <zoomscale>10000</zoomscale>
 </configuration>
 
 <!--

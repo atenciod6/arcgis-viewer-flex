@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<configuration label="Presas">
+<!--     <layer>http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Louisville/LOJIC_PublicSafety_Louisville/MapServer/3</layer> -->
+<!--     <titlefield>PD_NAME</titlefield> -->
+<!--     <fields all="false"> -->
+<!--         <field name="PD_NAME"/> -->
+<!--         <field name="ADDRESS" alias="Address"/> -->
+<!--     </fields> -->
+<!--     <filterfield> -->
+<!--         <name>ADDRESS</name> -->
+<!--         <alias>Filter by ADDRESS (Example: 29TH ST )</alias> -->
+<!--     </filterfield> -->
+<!--     <linkfield></linkfield> -->
+<!--     <refreshrate></refreshrate> -->
+<!--     <zoomscale>20000</zoomscale> -->
+<!--     <query>1=1</query> -->
+
+<layer>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_tematicos/MapServer/13</layer>
+    <query/>
+    <titlefield>NAME</titlefield>
+    <linkfield/>
+    <refreshrate/>
+    <zoomscale>200000</zoomscale>
+    <shareresults>false</shareresults>
+    <orderbyfields>NAME ASC</orderbyfields>
+    <fields all="false">
+        <field name="NAME" alias="NAME"/>
+        <field name="ALTITUDE" alias="ALTITUDE"/>
+        <field name="RIO" alias="RIO"/>
+        <field name="LUGAR" alias="LUGAR"/>
+        <field name="OPERADOR" alias="OPERADOR"/>
+        <field name="N_MBRE" alias="N_MBRE"/>
+    </fields>
+</configuration>
+
+<!--
+    See Query widget tag reference at
+    http://links.esri.com/querywidget
+-->

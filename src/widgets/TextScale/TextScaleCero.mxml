@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009"
+				   xmlns:s="library://ns.adobe.com/flex/spark"
+				   xmlns:esri="http://www.esri.com/2008/ags"
+				   xmlns:mx="library://ns.adobe.com/flex/mx"
+				   xmlns:viewer="com.esri.viewer.*"
+				   width="382" height="191" layout="horizontal">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.esri.ags.events.MapEvent;
+			import com.esri.ags.geometry.Extent;
+			import com.esri.ags.geometry.MapPoint;
+			import com.esri.ags.utils.WebMercatorUtil;
+			/* import com.esri.ags.utils. */
+			
+			import mx.formatters.NumberBaseRoundType;
+			import mx.utils.StringUtil;
+		]]>
+		
+		
+		
+	</fx:Script>
+		
+	<fx:Declarations>
+		<mx:NumberFormatter id="numberFormatter"/>
+	</fx:Declarations>
+	<viewer:filters>
+		<mx:GlowFilter alpha="1"
+					   blurX="3"
+					   blurY="3"
+					   color="0xFFFFFF"
+					   strength="7"/>
+	</viewer:filters>
+	<s:Label id="textscale" color="0x000000"/>
+</viewer:BaseWidget>

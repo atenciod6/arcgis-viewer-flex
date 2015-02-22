@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>Infraestructura</title>
+    <fields>
+        <field name="RECNUM" alias="RECNUM"/>
+        <field name="NAME" alias="NAME" visible="true"/>
+        <field name="ALTITUDE" alias="ALTITUDE" visible="true"/>
+        <field name="NO" alias="NO"/>
+        <field name="RIO" alias="RIO"/>
+        <field name="LUGAR" alias="LUGAR"/>
+        <field name="TIPO" alias="TIPO"/>
+        <field name="ALTURA_M" alias="ALTURA_M"/>
+        <field name="LONGITUD_M" alias="LONGITUD_M"/>
+        <field name="ESPEJO_M2" alias="ESPEJO_M2"/>
+        <field name="OPERADOR" alias="OPERADOR" visible="true"/>
+        <field name="AñO" alias="AñO"/>
+        <field name="VOL_HM" alias="VOL_HM"/>
+        <field name="CAPAC_HM" alias="CAPAC_HM"/>
+        <field name="Q_M3_S" alias="Q_M3_S"/>
+        <field name="N_MBRE" alias="N_MBRE"/>
+        <field name="POINT_X" alias="POINT_X"/>
+        <field name="POINT_Y" alias="POINT_Y"/>
+    </fields>
+    <showattachments>false</showattachments>
+    <showrelatedrecords>false</showrelatedrecords>
+</configuration>

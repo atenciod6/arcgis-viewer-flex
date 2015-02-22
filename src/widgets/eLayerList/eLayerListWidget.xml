@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<configuration>
+    <labels>
+        <visibilitylabel>Visibilidad de capas</visibilitylabel>
+        <expandall>Expand All Layers</expandall>
+        <collapseall>Collapse All Layers</collapseall>
+        <zoomtomakevisible>Zoom To Make Visible</zoomtomakevisible>
+        <generatinglegendmsg>Generating TOC Legend</generatinglegendmsg>
+    </labels>
+    <tocsettings>
+        <expanded everything="false">true</expanded>
+        <collapselegends>true</collapselegends>
+        <disablezoomtomenuoption>false</disablezoomtomenuoption>
+    </tocsettings>
+    <excludelayers>
+        <excludelayer mapservice="Parcel Data">68</excludelayer>
+    </excludelayers>
+    <excludegraphiclayers>true</excludegraphiclayers>
+    <excludebasemaplayers>true</excludebasemaplayers>
+    <usenewesridescription>false</usenewesridescription>
+</configuration>
