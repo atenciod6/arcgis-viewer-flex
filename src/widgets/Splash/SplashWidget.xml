@@ -1,14 +1,43 @@
 <?xml version="1.0" ?>
 <configuration>
+    <width>450</width>
+    <height>350</height>
     <content>
-        <![CDATA[
-             <p align='center'>
-                 <img src='assets/images/globe.png'/>
-                 <br/>
-                 <b><a href="http://links.esri.com/flexviewer" target='_blank'><font size="+2" color="#FFFF00">ArcGIS Viewer for Flex</font></a></b>
-             </p>
-       ]]>
-    </content>
+	<![CDATA[
+	<p align='center'>
+    <img src='assets/images/logoSnirhWhite.png'/><br/>
+    <b></b><br/><b>CONDICIONES DE USO</b></p>
+	<font size="10">
+	<p align="justify">El uso de la información contenida en este sitio web implica la aceptación de las
+	siguientes condiciones de uso:
+	<br/><br/>La Autoridad Nacional del Agua (ANA) a través de la Oficina del Sistema Nacional de Información
+	de Recursos Hídricos “OSNIRH” es la encargada de conducir, organizar y administrar el Sistema Nacional de
+	Recursos Hídricos y poner a disposición información geoespacial para la gestión de los recursos hídricos.
+	Por tal razón, se ha creado este sitio web llamado Geohidro, que facilita a los usuarios el acceso a la
+	información vectorial y raster.
+	<br/><br/>Los datos que aquí se disponen provienen de múltiples fuentes. El Geohidro pone este material a
+	disposición de forma individual y queda por tanto prohibida la comercialización de este derecho de acceso.
+	<br/><br/>Se autoriza el uso de la información que se presenta, siempre que se cite la fuente: “Geohidro de
+	la ANA en internet www.geosnirh/geohidrov2/gob.pe”, a fin de permitir a terceros verificar tal información.
+	<br/><br/>El Geohidro presenta información con la mayor oportunidad posible, no asumiendo responsabilidad
+	legal alguna o de cualquier otra índole por la precisión, oportunidad, contenido o uso de la misma que se dé
+	por terceros.
+	<br/><br/>Este sitio contiene medidas de seguridad para proteger la información de cualquier alteración realizada por
+	terceros, sin embargo el Geohidro no asume ninguna responsabilidad por la alteración o manipulación de la
+	información una vez cargadas.
+	<br/><br/>Este sitio web ofrece enlaces a otros de organismos nacionales e internacionales. No obstante, el Geohidro no
+	asume ningún tipo de responsabilidad por el contenido, ni por el uso de esos sitios.
+	<br/><br/>La OSNIRH no se responsabiliza de ningún tipo de daño o perjuicio sufrido por el usuario que se derive del
+	acceso a los servidores institucionales o del uso de información o aplicaciones en ellos contenidos. Aunque
+	el material contenido en este sitio ha sido previamente revisado con las últimas herramientas antivirus, la
+	OSNIRH le recomienda tomar precauciones para proteger su equipo.
+	</p></font>
+	]]></content>
+    
+    <labels>
+        <btnlabel>Continuar</btnlabel>
+    </labels>
+    
 </configuration>
 
 <!--
@@ -19,3 +48,5 @@
     See Splash widget tag reference at
     http://links.esri.com/splashwidget
 -->
+
+

@@ -4,7 +4,7 @@
 				   xmlns:esri="http://www.esri.com/2008/ags"
 				   xmlns:mx="library://ns.adobe.com/flex/mx"
 				   xmlns:viewer="com.esri.viewer.*"
-				   width="382" height="191" layout="horizontal">
+				   layout="horizontal">
 	
 	<fx:Script>
 		<![CDATA[
@@ -16,10 +16,13 @@
 			
 			import mx.formatters.NumberBaseRoundType;
 			import mx.utils.StringUtil;
+			
+			
+			private function loadHandler():void
+			{
+				textscale.text='scale: 1:' + map.scale.toFixed(0);
+			}
 		]]>
-		
-		
-		
 	</fx:Script>
 		
 	<fx:Declarations>

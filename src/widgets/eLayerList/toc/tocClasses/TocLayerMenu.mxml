@@ -82,6 +82,7 @@
             [Bindable] private var CollapseAll:String = "";
             
             [Embed(source="widgets/eLayerList/assets/images/metadata.png")]
+			
             [Bindable] private var _DescCls:Class;
             
             [Bindable] private var menuArrCol:ArrayCollection;

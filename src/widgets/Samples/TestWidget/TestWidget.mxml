@@ -24,6 +24,7 @@
         <![CDATA[
 			import com.esri.ags.events.MapMouseEvent;
 			import com.esri.ags.geometry.MapPoint;
+			import com.esri.ags.geometry.Extent;
 			
             //this function called when the widget's configuration is loaded
             private function init():void
@@ -37,12 +38,12 @@
 			protected function helloWorld_openHandler(event:Event):void
 			{
 				map.addEventListener(MapMouseEvent.MAP_CLICK, mapClicked);
-	/* 			map.addEventListener(MouseEvent.MOUSE_MOVE, map_mouseMovedHandler); */
+				map.addEventListener(MouseEvent.MOUSE_MOVE, map_mouseMovedHandler);
 			}
 			
 			private function map_mouseMovedHandler(event:MapMouseEvent):void
 			{
-				scalemove.text='Scale: 1:'+ event.map.scale.toFixed(0);
+				scalemove.text='Scale: 1:'+ map.scale.toFixed(0) + map.level;
 			}
 				
 			private function mapClicked(event:MapMouseEvent):void

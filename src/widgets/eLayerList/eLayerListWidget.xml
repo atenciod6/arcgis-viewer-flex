@@ -17,5 +17,5 @@
     </excludelayers>
     <excludegraphiclayers>true</excludegraphiclayers>
     <excludebasemaplayers>true</excludebasemaplayers>
-    <usenewesridescription>false</usenewesridescription>
+    <usenewesridescription>true</usenewesridescription>
 </configuration>

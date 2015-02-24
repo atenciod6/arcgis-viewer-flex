@@ -4,7 +4,7 @@
     <outputunit>mercator</outputunit>
     <numberformatter precision="3" />
     <labels>
-        <template>X:{1} Y:{0}</template>
+        <template>Y:{0} X:{1}</template>
     </labels> 
 </configuration>
 
