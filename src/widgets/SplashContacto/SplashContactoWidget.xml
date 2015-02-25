@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<configuration>
+    <width>300</width>
+    <height>330</height>
+    <content>
+	<![CDATA[
+	<font size="12">
+<p align='center'>
+    <img src='assets/images/logoAnaWhite.png'/><br/><br/>
+    Geohidro Versión 2.0 (15/03/2015)<br/><br/>
+    Calle Diecisiete Nº 355, Urb El Palomar,<br/>
+    San Isidro - Lima, Perú<br/>
+    Telf: 511-2243298 Fax: 511-2243298<br/>
+    <a href="mailto:comunicaciones@ana.gob.pe?Subject=Saludos" target="_top">comunicaciones@ana.gob.pe</a><br/>
+    <a href="mailto:sugerencias@ana.gob.pe?Subject=Saludos" target="_top">sugerencias@ana.gob.pe</a><br/>
+    <a href="mailto:fdelatorre@ana.gob.pe?Subject=Salu2" target="_top">fdelatorre@ana.gob.pe</a><br/><br/>
+    
+    ANA@Copyright
+</p>
+</font> 
+	]]></content>
+    
+    <labels>
+        <btnlabel>Continuar</btnlabel>
+    </labels>
+    
+</configuration>
+
+<!--
+    For valid HTML tags in Flash applications (that can be used for 'content'), see
+    http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flashx/textLayout/conversion/TextConverter.html#TEXT_FIELD_HTML_FORMAT
+-->
+<!--
+    See Splash widget tag reference at
+    http://links.esri.com/splashwidget
+-->
+
+

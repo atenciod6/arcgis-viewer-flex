@@ -4,7 +4,7 @@
     <outputunit>mercator</outputunit>
     <numberformatter precision="3" />
     <labels>
-        <template>Y:{0} X:{1}</template>
+        <template>WGS_1984_World_Mercator: {0} {1}</template>
     </labels> 
 </configuration>
 

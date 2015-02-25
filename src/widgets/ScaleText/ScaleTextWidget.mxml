@@ -36,14 +36,13 @@
 			{
                 if (configXML) // checking for valid content in the configuration file
                 {
-						map.addEventListener(ExtentEvent.EXTENT_CHANGE, mapChangeExtent);
+					map.addEventListener(ExtentEvent.EXTENT_CHANGE, mapChangeExtent); 
                 }
             }
 			
- 			/* private function mapClicked (event:MapMouseEvent):void */
 			private function mapChangeExtent (event:ExtentEvent):void
 			{
-				textscale.text='Escala: 1:'+ map.scale.toFixed(0);
+				textscale.text='Escala: 1:'+ map.scale.toFixed(0) + map.level;
 			} 
 			
 		]]>
