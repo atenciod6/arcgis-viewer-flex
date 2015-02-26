@@ -10,7 +10,7 @@
 
        <title>..:: GeoHidro v2.0 ::..</title>
     <subtitle>Sistema Nacional de Información de Recursos Hídricos</subtitle>
-    <logo>assets/images/logo2.png</logo>
+    <logo>assets/images/logoSnirhWhite.png</logo>
     <style>
         <colors>0xcee7f4,0x39628c,0x355d89,0x294867,0xcee7f4</colors>
         <alpha>0.8</alpha>
@@ -22,16 +22,16 @@
     <geometryservice url="http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer" />
 
     <!-- UI elements -->
-    <widget left="10"  top="50"    config="widgets/Navigation/NavigationWidget.xml" url="widgets/Navigation/NavigationWidget.swf"/>
+    <widget left="10"  top="280"    config="widgets/Navigation/NavigationWidget.xml" url="widgets/Navigation/NavigationWidget.swf"/>
     <widget right="0" bottom="0"   config="widgets/OverviewMap/OverviewMapWidget.xml" url="widgets/OverviewMap/OverviewMapWidget.swf"/>
     <widget right="20" top="55"    config="widgets/MapSwitcher/MapSwitcherWidget.xml" url="widgets/MapSwitcher/MapSwitcherWidget.swf"/>
     <widget left="0" top="0"     config="widgets/HeaderController/HeaderControllerWidget.xml" url="widgets/HeaderController/HeaderControllerWidget.swf"/>	
 	<widget left="3" bottom="1"	   config="widgets/Coordinate/CoordinateWidget.xml" url="widgets/Coordinate/CoordinateWidget.swf"/>
 	<widget left="260" bottom="1" config="widgets/CoordinateUtm/CoordinateUtmWidget.xml" url="widgets/CoordinateUtm/CoordinateUtmWidget.swf"/>
 	<widget left="3" bottom="30" config="widgets/ScaleText/ScaleTextWidget.xml" url="widgets/ScaleText/ScaleTextWidget.swf"/>
-	<widget right="215" top="50" url="widgets/StaticImage/StaticImageWidget.swf" config="widgets/StaticImage/StaticImageWidget.xml" label="Imagen estática"/>
-	<widget right="263" top="50" url="widgets/Facebook/FacebookWidget.swf" config="widgets/Facebook/FacebookWidget.xml" label="Facebook"/>
-	<widget right="311" top="50" url="widgets/Youtube/YoutubeWidget.swf" config="widgets/Youtube/YoutubeWidget.xml" label="Youtube"/>
+	<widget right="133" top="55" url="widgets/StaticImage/StaticImageWidget.swf" config="widgets/StaticImage/StaticImageWidget.xml" label="Imagen estática"/>
+	<widget right="168" top="55" url="widgets/Facebook/FacebookWidget.swf" config="widgets/Facebook/FacebookWidget.xml" label="Facebook"/>
+	<widget right="203" top="55" url="widgets/Youtube/YoutubeWidget.swf" config="widgets/Youtube/YoutubeWidget.xml" label="Youtube"/>
 	<widget url="widgets/Splash/SplashWidget.swf" config="widgets/Splash/SplashWidget.xml" label="Presentación"/>
 	
 	
