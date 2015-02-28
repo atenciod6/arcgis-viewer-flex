@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009"
+				   xmlns:s="library://ns.adobe.com/flex/spark"
+				   xmlns:viewer="com.esri.viewer.*"
+				   xmlns:components="com.esri.viewer.components.*"
+				   widgetConfigLoaded="widgetConfigLoadedHandler()">
+
+    <fx:Script>
+        <![CDATA[
+            import com.esri.viewer.AppEvent;
+            import mx.events.FlexEvent;
+            import spark.components.supportClasses.ItemRenderer;
+    
+			private function widgetConfigLoadedHandler():void
+            {
+                if (configXML)
+                {
+                    var geocoderXML:XML = configXML.geocoder[0] || configXML.search[0];
+
+                    const shouldEnableGeocoder:Boolean = geocoderXML && (geocoderXML.@visible[0] != "false");
+                    if (shouldEnableGeocoder)
+                    {
+                        singleLineSearch.hostBaseWidget = this;
+                        singleLineSearch.includeInLayout = true;
+                        singleLineSearch.visible = true;
+                    }
+                }
+            }
+     
+        ]]>
+    </fx:Script>
+
+    <s:Group id="GeocoderContent">
+                <components:GeocoderComponent id="singleLineSearch"
+                                              width="200" height="28"
+                                              includeInLayout="false"
+                                              visible="false"/>
+        <s:filters>
+            <s:DropShadowFilter alpha="0.5"
+                                blurX="10"
+                                blurY="10"/>
+        </s:filters>
+    </s:Group>
+</viewer:BaseWidget>

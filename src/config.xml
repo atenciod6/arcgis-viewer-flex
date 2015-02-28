@@ -24,14 +24,15 @@
     <!-- UI elements -->
     <widget left="10"  top="280"    config="widgets/Navigation/NavigationWidget.xml" url="widgets/Navigation/NavigationWidget.swf"/>
     <widget right="0" bottom="0"   config="widgets/OverviewMap/OverviewMapWidget.xml" url="widgets/OverviewMap/OverviewMapWidget.swf"/>
-    <widget right="20" top="55"    config="widgets/MapSwitcher/MapSwitcherWidget.xml" url="widgets/MapSwitcher/MapSwitcherWidget.swf"/>
+    <widget right="20" top="7"    config="widgets/MapSwitcher/MapSwitcherWidget.xml" url="widgets/MapSwitcher/MapSwitcherWidget.swf"/>
     <widget left="0" top="0"     config="widgets/HeaderController/HeaderControllerWidget.xml" url="widgets/HeaderController/HeaderControllerWidget.swf"/>	
 	<widget left="3" bottom="1"	   config="widgets/Coordinate/CoordinateWidget.xml" url="widgets/Coordinate/CoordinateWidget.swf"/>
 	<widget left="260" bottom="1" config="widgets/CoordinateUtm/CoordinateUtmWidget.xml" url="widgets/CoordinateUtm/CoordinateUtmWidget.swf"/>
 	<widget left="3" bottom="30" config="widgets/ScaleText/ScaleTextWidget.xml" url="widgets/ScaleText/ScaleTextWidget.swf"/>
-	<widget right="133" top="55" url="widgets/StaticImage/StaticImageWidget.swf" config="widgets/StaticImage/StaticImageWidget.xml" label="Imagen estática"/>
-	<widget right="168" top="55" url="widgets/Facebook/FacebookWidget.swf" config="widgets/Facebook/FacebookWidget.xml" label="Facebook"/>
-	<widget right="203" top="55" url="widgets/Youtube/YoutubeWidget.swf" config="widgets/Youtube/YoutubeWidget.xml" label="Youtube"/>
+	<widget right="341" top="7" url="widgets/Facebook/FacebookWidget.swf" config="widgets/Facebook/FacebookWidget.xml" label="Facebook"/>
+	<widget right="380" top="7" url="widgets/StaticImage/StaticImageWidget.swf" config="widgets/StaticImage/StaticImageWidget.xml" label="Imagen estática"/>
+	<widget right="415" top="7" url="widgets/Youtube/YoutubeWidget.swf" config="widgets/Youtube/YoutubeWidget.xml" label="Youtube"/>
+	<widget right="133" top="8" url="widgets/Geocoder/GeocoderWidget.swf" config="widgets/Geocoder/GeocoderWidget.xml"/>
 	<widget url="widgets/Splash/SplashWidget.swf" config="widgets/Splash/SplashWidget.xml" label="Presentación"/>
 	
 	
@@ -128,7 +129,7 @@
                 icon="assets/images/i_draw2.png"
                 config="widgets/Draw/DrawWidget.xml"
                 url="widgets/Draw/DrawWidget.swf"/>
-		<widget label="Lista de capas" right="20" top="100" height="500"
+		<widget label="Lista de capas" right="20" top="51" height="500"
         		config="widgets/eLayerList/eLayerListWidget.xml"
         		url="widgets/eLayerList/eLayerListWidget.swf"
         		icon="widgets/eLayerList/assets/images/i_folder.png" preload="open"/>

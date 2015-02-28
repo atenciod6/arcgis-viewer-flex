@@ -30,11 +30,11 @@
         <![CDATA[
             import com.esri.viewer.AppEvent;
             import com.esri.viewer.WidgetStates;
-
+            
             import mx.collections.ArrayCollection;
             import mx.collections.ArrayList;
             import mx.events.FlexEvent;
-
+            
             import spark.components.supportClasses.ItemRenderer;
             import spark.layouts.HorizontalAlign;
             import spark.layouts.TileLayout;
@@ -267,9 +267,26 @@
                 return menuItems;
             }
 
+			
+			[Bindable]
+			private var xOver:int;
+			
             private function widgetItemDG_widgetItemClickHandler(event:Event):void
             {
-                var widgetItem:WidgetItem = ItemRenderer(event.target).data as WidgetItem;
+                
+				var pointGlobal:Point = ItemRenderer(event.target).localToGlobal(new Point(0, 0));
+				var pointLocal:Point = headerGroup.globalToLocal(pointGlobal); // get the local coordinates where the menuItem will be shown
+				
+				xOver = pointLocal.x;
+				
+				widgetList.visible = false;
+				if (WidgetItem(ItemRenderer(event.target).data).label)
+				{
+					menuToolTip.visible = true;
+					menuTitle.text = WidgetItem(ItemRenderer(event.target).data).label;
+				}
+				
+				var widgetItem:WidgetItem = ItemRenderer(event.target).data as WidgetItem;
                 if (widgetItem.isGroup)
                 {
                     groupWidgetArrCol = new ArrayCollection();
@@ -301,7 +318,7 @@
                 AppEvent.dispatch(AppEvent.WIDGET_RUN, widgetItem.id);
             }
 
-            [Bindable]
+           /*  [Bindable]
             private var xOver:int;
 
             private function widgetItemDG_widgetItemMouseOverHandler(event:Event):void
@@ -317,8 +334,28 @@
                     menuToolTip.visible = true;
                     menuTitle.text = WidgetItem(ItemRenderer(event.target).data).label;
                 }
-            }
-
+            }  */
+			
+		    [Bindable]
+			private var yOver:int;
+			
+			private function widgetItemDG_widgetItemMouseOverHandler(event:Event):void
+			{
+				var pointGlobal:Point = ItemRenderer(event.target).localToGlobal(new Point(0, 0));
+				var pointLocal:Point = headerGroup.globalToLocal(pointGlobal); // get the local coordinates where the menuItem will be shown
+				
+				yOver = pointLocal.y;
+				
+				widgetList.visible = false;
+				if (WidgetItem(ItemRenderer(event.target).data).label)
+				{
+					menuToolTip.visible = true;
+					menuTitle.text = WidgetItem(ItemRenderer(event.target).data).label;
+				}
+			}
+			
+			
+			
             private function widgetItemDG_widgetItemMouseOutHandler(event:Event):void
             {
                 menuToolTip.visible = false;
@@ -423,7 +460,7 @@
              width="100%" height="85">
 		
         <s:Group id="headerContent"
-                 width="100%" height="{headerGroup.height - 45}">
+                 width="40%" height="{headerGroup.height - 45}">
 <!--            <s:Rect width="100%" height="100%"
                     alpha="{getStyle('contentBackgroundAlpha')}">
                 <s:fill>
@@ -433,8 +470,8 @@
 				
 			<!--Fondo creado desde fxg en fireworks para Geohidro-->
 			<s:Path id="top_left_bg"
-					width="40%"
-					winding="evenOdd" data="M 0 0 C 0 0 0 0 0 0 C 0 0 0 2 0 2 C 0 1 0 1 0 0 Z M 102 0 C 102 0 0 0 0 0 C 0 1 0 1 0 2 C 0 2 0 240 0 240 C 0 240 1 240 1 240 C 64 225 57 181 56 95 C 56 92 57 89 56 86 C 73 27 120 56 264 56 C 412 56 526 41 539 8 C 539 7 542 1 540 0 C 540 0 102 0 102 0 Z " blendMode="normal" alpha="0.8">
+					width="100%"
+					winding="evenOdd" data="M 0 0 C 0 0 0 0 0 0 C 0 0 0 2 0 2 C 0 1 0 1 0 0 Z M 102 0 C 102 0 0 0 0 0 C 0 1 0 1 0 2 C 0 2 0 240 0 240 C 0 240 1 240 1 240 C 48 228 45 180 47 94 C 49 26 120 56 264 56 C 412 56 526 41 539 8 C 539 7 542 1 540 0 C 540 0 102 0 102 0 Z " blendMode="normal" alpha="0.8">
 				<s:fill>
 					<s:SolidColor color="#39628c"/>
 				</s:fill>
@@ -443,6 +480,7 @@
 				</s:filters>
 			</s:Path>
 
+		<s:VGroup id="Cabecera" width="100%">
             <s:HGroup width="100%" height="100%"
                       gap="5"
                       paddingLeft="5"
@@ -473,20 +511,7 @@
                                                   textChanged="arrangeHeadingsAndWidgets()"/>
                     </s:VGroup>
 
-                    <HeaderController:WidgetItemDataGroup id="widgetItemDG"
-                                                          width="100%"
-                                                          dataProvider="{widgetItemArrCol}"
-                                                          horizontalCenter="0"
-                                                          widgetItemClick="widgetItemDG_widgetItemClickHandler(event)"
-                                                          widgetItemMouseOut="widgetItemDG_widgetItemMouseOutHandler(event)"
-                                                          widgetItemMouseOver="widgetItemDG_widgetItemMouseOverHandler(event)">
-                        <HeaderController:layout>
-                            <s:HorizontalLayout gap="12"
-                                                horizontalAlign="center"
-                                                useVirtualLayout="true"
-                                                verticalAlign="middle"/>
-                        </HeaderController:layout>
-                    </HeaderController:WidgetItemDataGroup>
+
                 </s:HGroup>
 
                 <components:GeocoderComponent id="singleLineSearch"
@@ -500,16 +525,31 @@
                              itemRenderer="widgets.HeaderController.LinkItemRenderer"
                              visible="false"/>
             </s:HGroup>
+						
+			<HeaderController:WidgetItemDataGroup id="widgetItemDG"
+												  width="100%"
+												  dataProvider="{widgetItemArrCol}"
+												  horizontalCenter="-150"
+												  widgetItemClick="widgetItemDG_widgetItemClickHandler(event)"
+												  widgetItemMouseOut="widgetItemDG_widgetItemMouseOutHandler(event)"
+												  widgetItemMouseOver="widgetItemDG_widgetItemMouseOverHandler(event)">
+				<HeaderController:layout>
+					<s:VerticalLayout gap="12" horizontalAlign="left" paddingLeft="10" paddingTop="15"
+									  useVirtualLayout="true" verticalAlign="middle"/>
+				</HeaderController:layout>
+			</HeaderController:WidgetItemDataGroup>
+	</s:VGroup>
+			
         </s:Group>
 
-        <s:VGroup id="menuToolTip"
-                  x="{xOver + 12 - menuToolTipBox.width/2}" y="{headerContent.height}"
+        <s:HGroup id="menuToolTip"
+                  x="{44}" y="{yOver + 2}"
                   gap="0"
-                  horizontalAlign="center"
+                  verticalAlign="middle"
                   visible="false">
             <s:Graphic id="menuTriangle" visible="{menuToolTip.visible}">
                 <s:Group>
-                    <s:Path data="m 7 0 l 7 14 l -14 0 z">
+                    <s:Path data="M 20 3 L 20 17 L 0 10 L 20 3 Z">
                         <s:fill>
                             <s:SolidColor alpha="1" color="{getStyle('contentBackgroundColor')}"/>
                         </s:fill>
@@ -524,7 +564,8 @@
                                cornerRadius="10"
                                visible="{menuToolTip.visible}">
                 <s:layout>
-                    <s:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+                    <s:HorizontalLayout horizontalAlign="center" paddingLeft="2"
+										verticalAlign="middle"/>
                 </s:layout>
 
                 <s:Label id="menuTitle"
@@ -534,10 +575,11 @@
                          paddingTop="5"
                          visible="{menuToolTip.visible}"/>
             </s:BorderContainer>
-        </s:VGroup>
+        </s:HGroup>
 
         <s:BorderContainer id="widgetList"
-                           x="{xOver + 4 - widgetListDG.width/2}" y="{headerContent.height}" width="{widgetListDG.width + 4}" height="{widgetListDG.height + 2}"
+                           x="{xOver + 36}" y="{yOver}"
+						   width="{widgetListDG.width + 4}" height="{widgetListDG.height + 2}"
                            backgroundColor="{getStyle('contentBackgroundColor')}"
                            borderColor="{getStyle('color')}"
                            borderVisible="true"

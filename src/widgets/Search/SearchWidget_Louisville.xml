@@ -1,33 +1,34 @@
 <?xml version="1.0" ?>
-<configuration label="Louisville Parcels and Police">
+<configuration>
+  <zoomscale>50000</zoomscale>
+    <shareresults>false</shareresults>
     <layers>
         <layer>
-            <name>Louisville Parcels</name>
-            <url>http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Louisville/LOJIC_LandRecords_Louisville/MapServer/0</url>
-            <expression>PARCELID like '[value]'</expression>
-            <textsearchlabel>Search by Parcel ID  [ Example: 181001490000 or 1810%]</textsearchlabel>
-            <titlefield>PARCELID</titlefield>
-            <linkfield></linkfield>
-            <fields all="false">
-                <field name="PARCELID"/>
+            <name>Presas</name>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_tematicos/MapServer/13</url>
+            <textsearchlabel>Seleccionar por atributo</textsearchlabel>
+            <titlefield>NAME</titlefield>
+            <fields>
+                <field name="NAME" alias="NAME"/>
+                <field name="TIPO" alias="TIPO"/>
+                <field name="ESPEJO_M2" alias="ESPEJO_M2"/>
             </fields>
+            <orderbyfields>NAME ASC</orderbyfields>
         </layer>
         <layer>
-            <name>Louisville Police Facilities</name>
-            <url>http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Louisville/LOJIC_PublicSafety_Louisville/MapServer/3</url>
-            <expression>PD_NAME like '[value]'</expression>
-            <textsearchlabel>Search Police Stations by name... [ Example: 2ND DIVISION or 2%]</textsearchlabel>
-            <titlefield>PD_NAME</titlefield>
-            <linkfield></linkfield>
-            <fields all="false">
-                <field name="PD_NAME"/>
-                <field name="ADDRESS" alias="Address"/>
+            <name>Estaciones Hidrometeorologícas</name>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_tematicos/MapServer/8</url>
+            <textsearchlabel>Seleccionar por atributo</textsearchlabel>
+            <titlefield>Nombre</titlefield>
+            <fields>
+                <field name="Nombre" alias="Nombre"/>
+                <field name="TIP_EST" alias="TIP_EST"/>
+                <field name="ESTADO" alias="ESTADO"/>
             </fields>
+            <orderbyfields>TIP_EST ASC</orderbyfields>
         </layer>
     </layers>
-    <zoomscale>10000</zoomscale>
 </configuration>
-
 <!--
     See Search widget tag reference at
     http://links.esri.com/searchwidget
