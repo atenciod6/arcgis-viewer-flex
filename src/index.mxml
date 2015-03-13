@@ -20,7 +20,7 @@
                xmlns:s="library://ns.adobe.com/flex/spark"
                xmlns:viewer="com.esri.viewer.*"
                xmlns:managers="com.esri.viewer.managers.*"
-               pageTitle="ArcGIS Viewer for Flex">
+               pageTitle="..:: GeoHidro v2.0 ::..">
 
     <fx:Style source="defaults.css"/>
 

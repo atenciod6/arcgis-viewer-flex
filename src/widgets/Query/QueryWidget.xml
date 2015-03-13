@@ -24,12 +24,11 @@
     <shareresults>false</shareresults>
     <orderbyfields>NAME ASC</orderbyfields>
     <fields all="false">
-        <field name="NAME" alias="NAME"/>
-        <field name="ALTITUDE" alias="ALTITUDE"/>
-        <field name="RIO" alias="RIO"/>
+    	<field name="NAME" alias="NOMBRE"/>
+        <field name="RIO" alias="RÍO"/>
         <field name="LUGAR" alias="LUGAR"/>
+        <field name="TIPO" alias="TIPO"/>
         <field name="OPERADOR" alias="OPERADOR"/>
-        <field name="N_MBRE" alias="N_MBRE"/>
     </fields>
 </configuration>
 

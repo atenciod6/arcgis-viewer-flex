@@ -29,9 +29,9 @@
 	<widget left="3" bottom="1"	   config="widgets/Coordinate/CoordinateWidget.xml" url="widgets/Coordinate/CoordinateWidget.swf"/>
 	<widget left="260" bottom="1" config="widgets/CoordinateUtm/CoordinateUtmWidget.xml" url="widgets/CoordinateUtm/CoordinateUtmWidget.swf"/>
 	<widget left="3" bottom="30" config="widgets/ScaleText/ScaleTextWidget.xml" url="widgets/ScaleText/ScaleTextWidget.swf"/>
-	<widget right="341" top="7" url="widgets/Facebook/FacebookWidget.swf" config="widgets/Facebook/FacebookWidget.xml" label="Facebook"/>
-	<widget right="380" top="7" url="widgets/StaticImage/StaticImageWidget.swf" config="widgets/StaticImage/StaticImageWidget.xml" label="Imagen estática"/>
-	<widget right="415" top="7" url="widgets/Youtube/YoutubeWidget.swf" config="widgets/Youtube/YoutubeWidget.xml" label="Youtube"/>
+	<widget right="340" top="7" url="widgets/Facebook/FacebookWidget.swf" config="widgets/Facebook/FacebookWidget.xml" label="Facebook"/>
+	<widget right="375" top="7" url="widgets/StaticImage/StaticImageWidget.swf" config="widgets/StaticImage/StaticImageWidget.xml" label="Imagen estática"/>
+	<widget right="410" top="7" url="widgets/Youtube/YoutubeWidget.swf" config="widgets/Youtube/YoutubeWidget.xml" label="Youtube"/>
 	<widget right="133" top="8" url="widgets/Geocoder/GeocoderWidget.swf" config="widgets/Geocoder/GeocoderWidget.xml"/>
 	<widget url="widgets/Splash/SplashWidget.swf" config="widgets/Splash/SplashWidget.xml" label="Presentación"/>
 	
@@ -56,17 +56,17 @@
 <!--                    popupconfig="popups/PopUp_Fires.xml" -->
 <!--                    url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0"/> -->
 			
-
-        	<layer label="Externos" type="dynamic" visible="false" imageformat="png8" alpha="0.5"
+			<layer label="Cartografía base" type="dynamic" visible="true" imageformat="png8"
+        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_base/MapServer"/>
+        	<layer label="Fuentes externas" type="dynamic" visible="false" imageformat="png8" alpha="0.5"
         			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_externos/MapServer" />
         	<layer label="Estudios temáticos" type="dynamic" visible="false" imageformat="png8"
         			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_tematicos/MapServer" >
+        			<sublayer id="13" popupconfig="popups/PopUp_Presas.xml"/>
+        			
 <!--  El widget de identificador muestra todas las leyendas, sin ser necesario este popup personalizado -->
  <!--      	  <sublayer id="1" popupconfig="popups/PopUp_Infraestuctura.xml"/> -->
             </layer>
-        			
-        	<layer label="Base" type="dynamic" visible="true" imageformat="png8"
-        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_base/MapServer"/>
         </operationallayers>
    
     </map>
