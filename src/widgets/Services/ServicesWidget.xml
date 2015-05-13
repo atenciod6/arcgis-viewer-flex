@@ -1,0 +1,4 @@
+<configuration>
+<!--     <content>Hello World !</content> -->
+<content>http://geosnirh.ana.gob.pe:6080/arcgis/services/SERV_UNIDADES_HIDROGRAFICAS/MapServer/WMSServer?</content>
+</configuration>

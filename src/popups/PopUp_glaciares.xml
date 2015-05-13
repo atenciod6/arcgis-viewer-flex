@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>{nomb_base}</title>
+    <fields>
+        <field name="OBJECTID_1" alias="OBJECTID_1"/>
+        <field name="nomb_base" alias="nomb_base"/>
+        <field name="alt_min" alias="Altura mínima" visible="true"/>
+        <field name="alt_max" alias="Altura máxima" visible="true"/>
+        <field name="cod_glims" alias="Código Glims" visible="true"/>
+        <field name="area_km2" alias="Área (km2)" visible="true"/>
+        <field name="cordillera" alias="Cordillera" visible="true"/>
+        <field name="Shape_Leng" alias="Shape_Leng"/>
+        <field name="Shape_Length" alias="Shape_Length"/>
+        <field name="Shape_Area" alias="Shape_Area"/>
+    </fields>
+    <showattachments>true</showattachments>
+    <showrelatedrecords>true</showrelatedrecords>
+    <showzoomtobutton>true</showzoomtobutton>
+</configuration>
+
+<!--
+    Pop-up configuration file for:
+    http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/SanFrancisco/311Incidents/FeatureServer/0
+
+    See pop-up documentation at
+    http://links.esri.com/flexviewer/popups
+-->

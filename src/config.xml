@@ -57,15 +57,26 @@
 <!--                    url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0"/> -->
 			
 			<layer label="Cartografía base" type="dynamic" visible="true" imageformat="png8"
-        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_base/MapServer"/>
+        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_CARTOGRAFIA_BASE_UTM18S/MapServer"/>
+
         	<layer label="Fuentes externas" type="dynamic" visible="false" imageformat="png8" alpha="0.5"
-        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_externos/MapServer" />
+        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_FUENTES_EXTERNAS/MapServer" />
+<!--         	<layer type="dynamic" label="Imágenes satelitales" copyright="" imageformat="png8" url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_IMAGEN_RAPIDEYE/MapServer" visible="false"> -->
+<!--                 <sublayer id="3" popupconfig="popups/PopUp_2010.xml"/> -->
+<!--                 <sublayer id="2" popupconfig="popups/PopUp_2011.xml"/> -->
+<!--                 <sublayer id="1" popupconfig="popups/PopUp_2012.xml"/> -->
+<!--             </layer> -->
+        	<layer label="Inventarios nacionales" type="dynamic" visible="false" imageformat="png8"
+        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_INVENTARIO_NACIONAL/MapServer" >
+        			<sublayer id="0" popupconfig="popups/PopUp_glaciares.xml"/>
+        			<sublayer id="1" popupconfig="popups/PopUp_lagunasgla.xml"/>
+        	</layer>
+<!-- Se comentó esta sección hasta que se revise la cartografía del ALA -->
+<!--         	<layer label="Estudios regionales" type="dynamic" visible="false" imageformat="png8" -->
+<!--         			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/AlaCa%C3%B1ete/ServicioAlaCa%C3%B1ete/MapServer" /> -->
         	<layer label="Estudios temáticos" type="dynamic" visible="false" imageformat="png8"
-        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_tematicos/MapServer" >
-        			<sublayer id="13" popupconfig="popups/PopUp_Presas.xml"/>
-        			
-<!--  El widget de identificador muestra todas las leyendas, sin ser necesario este popup personalizado -->
- <!--      	  <sublayer id="1" popupconfig="popups/PopUp_Infraestuctura.xml"/> -->
+        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematico/MapServer" >
+        		<sublayer id="15" popupconfig="popups/PopUp_Presas.xml"/>
             </layer>
         </operationallayers>
    
@@ -91,6 +102,10 @@
       </widgetgroup>
       
       <widgetgroup label="Complementos" icon="assets/images/i_globe.png">
+<!--         <widget label="Servicios WMS" left="200" top="200" -->
+<!--         		config="widgets/Services/ServicesWidget.xml" -->
+<!--         		url="widgets/Services/ServicesWidget.swf" -->
+<!--         		icon="assets/images/i_layers.png"/> -->
         <widget label="Perfil de elevación" right="200" top="300"
         		config="widgets/ElevationProfile/ElevationProfileWidget.xml"
         		url="widgets/ElevationProfile/ElevationProfileWidget.swf"
@@ -129,21 +144,21 @@
                 icon="assets/images/i_draw2.png"
                 config="widgets/Draw/DrawWidget.xml"
                 url="widgets/Draw/DrawWidget.swf"/>
-		<widget label="Lista de capas" right="20" top="51" height="500"
+		<widget label="Lista de capas" right="20" top="51" height="580"
         		config="widgets/eLayerList/eLayerListWidget.xml"
         		url="widgets/eLayerList/eLayerListWidget.swf"
         		icon="widgets/eLayerList/assets/images/i_folder.png" preload="open"/>
       </widgetgroup>
       
       <widgetgroup label="Ayuda" icon="assets/images/i_help.png">
+      	<widget label="ArcGIS Online"
+        		icon="assets/images/i_globe.png"
+        		config="widgets/Link/LinkWidget_AGOL.xml"
+        		url="widgets/Link/LinkWidget.swf"/>
       	<widget label="Web ANA"
         		icon="assets/images/i_home.png"
         		config="widgets/Link/LinkWidget_ana.xml"
         		url="widgets/Link/LinkWidget.swf"/>
-<!--       	<widget label="Contacto" -->
-<!--         		icon="widgets/Link/assets/images/esri.png" -->
-<!--         		config="widgets/Link/LinkWidget_esri.xml" -->
-<!--         		url="widgets/Link/LinkWidget.swf"/> -->
       	<widget label="Contacto"
         		icon="assets/images/i_about.png"
         		config="widgets/SplashContacto/SplashContactoWidget.xml"

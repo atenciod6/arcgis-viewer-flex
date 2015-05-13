@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<configuration>
+       <title>{nom_final}</title>
+    <fields>
+        <field name="OBJECTID_1" alias="OBJECTID_1"/>
+        <field name="anchomax" alias="Ancho máximo" visible="true"/>
+        <field name="largomax" alias="Largo máximo" visible="true"/>
+        <field name="altitud" alias="Altitud" visible="true"/>
+        <field name="cod_lag" alias="Código laguna" visible="true"/>
+        <field name="nom_final" alias="nom_final"/>
+        <field name="area_m2" alias="Área (m2)" visible="true"/>
+        <field name="cordillera" alias="Cordillera" visible="true"/>
+        <field name="Shape_Leng" alias="Shape_Leng"/>
+        <field name="Shape_Length" alias="Shape_Length"/>
+        <field name="Shape_Area" alias="Shape_Area"/>
+    </fields>
+    <showattachments>false</showattachments>
+    <showrelatedrecords>false</showrelatedrecords>
+</configuration>
+
+<!--
+    Pop-up configuration file for:
+    http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0
+
+    See pop-up documentation at
+    http://links.esri.com/flexviewer/popups
+-->

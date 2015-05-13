@@ -44,6 +44,27 @@
         <copylabel>Copiar resultado a portapapeles</copylabel>
     </labels>
     <layers onlythese="false">
+        <layer>
+            <name>Clasificación cuerpos agua</name>
+            <id>2</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematico/MapServer</url>
+            <fields>
+                <field name="NOMBRE" alias="Nombre"/>
+                <field name="CODE_RIO" alias="Código de río"/>
+                <field name="TIPO" alias="Tipo"/>
+                <field name="CUERPOAGUA" alias="Cuerpo de agua"/>
+                <field name="CATEGORIA" alias="Categoría"/>
+                <field name="CLASE" popuponly="true" alias="Clase"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer>
+        <excludelayer id="35" url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_CARTOGRAFIA_BASE_UTM18S/MapServer"/>
+        <excludelayer id="36" url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_CARTOGRAFIA_BASE_UTM18S/MapServer"/>
+    </layers>
+    
+<!--     <layers onlythese="false"> -->
 <!--     Puse en comentario los filtros de identificador para usar todas las capas -->
 <!--         <layer> -->
 <!-- 	    <useproxy>false</useproxy> -->
@@ -240,7 +261,6 @@
 <!--         <excludelayer url="http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Reference_Overlay/MapServer" id="0"/> -->
 <!--         <excludelayer url="http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer"/> -->
 <!--         <excludelayer url="http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer"/> -->
-    </layers>
 
     <symbols>
         <simplefillsymbol color="0x448ccb" alpha="0.4"

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>{Nombre}</title>
+    <fields>
+        <field name="Raster" alias="Raster"/>
+        <field name="Shape_Length" alias="Shape_Length"/>
+        <field name="Shape_Area" alias="Shape_Area"/>
+        <field name="Nombre" alias="Nombre"/>
+        <field name="Sensor" alias="Sensor" visible="true"/>
+        <field name="Resolucion" alias="Resolucion" visible="true"/>
+        <field name="Tipo" alias="Tipo" visible="true"/>
+        <field name="Adquisicion" alias="Adquisicion" visible="true"/>
+        <field name="Formato" alias="Formato" visible="true"/>
+        <field name="Bandas" alias="Bandas" visible="true"/>
+        <field name="Nubosidad" alias="Nubosidad" visible="true"/>
+        <field name="Origen" alias="Origen" visible="true"/>
+    </fields>
+    <showattachments>false</showattachments>
+    <showrelatedrecords>false</showrelatedrecords>
+</configuration>
