@@ -3,7 +3,7 @@
     <!-- geo, dms, mercator -->
     <outputunit>dms</outputunit>
     <labels>
-        <template>GCS_WGS_1984: {0} {1}</template>
+        <template>GCS WGS 1984: {0} {1}</template>
     </labels> 
 </configuration>
 

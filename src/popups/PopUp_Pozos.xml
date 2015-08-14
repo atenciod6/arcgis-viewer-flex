@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>{TIP_POZO}</title>
+    <fields>
+        <field name="TIP_POZO" alias="Tipo:" visible="true"/>
+        <field name="ESTADO_PO" alias="Estado:" visible="true"/>
+        <field name="ACUIFERO" alias="Acuífero:" visible="true"/>
+        <field name="CODIGO" alias="Código:" visible="true"/>
+    </fields>
+</configuration>
+
+<!--
+    Pop-up configuration file for:
+    http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0
+
+    See pop-up documentation at
+    http://links.esri.com/flexviewer/popups
+-->

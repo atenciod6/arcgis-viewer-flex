@@ -1,12 +1,11 @@
 <?xml version="1.0" ?>
 <configuration>
-    <title>{NAME}</title>
+    <title>{NOMBRE}</title>
     <fields>
-        <field name="RIO" alias="Río:" visible="true"/>
-        <field name="LUGAR" alias="Lugar:" visible="true"/>
+        <field name="CODE_RIO" alias="Código de río:" visible="true"/>
         <field name="TIPO" alias="Tipo:" visible="true"/>
-        <field name="OPERADOR" alias="Operador:" visible="true"/>
-        <field name="CAPAC_HM" alias="Capacidad (hm3):" visible="true"/>
+        <field name="CUERPOAGUA" alias="Cuerpo de agua:" visible="true"/>
+        <field name="CATEGORIA" alias="Categoría:" visible="true"/>
     </fields>
 </configuration>
 

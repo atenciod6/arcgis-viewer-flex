@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>{NOMBRE}</title>
+    <fields>
+<!--         <field name="NOMBRE" alias="NOMBRE"/> -->
+<!--         <field name="ALTITUD" alias="ALTITUD"/> -->
+<!--         <field name="DESCRIP" alias="DESCRIP"/> -->
+        <field name="PRO_ESP" alias="Proyecto:" visible="true"/>
+        <field name="Q_M3S" alias="Caudal (m3/s):" visible="true"/>
+    </fields>
+</configuration>
+
+<!--
+    Pop-up configuration file for:
+    http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0
+
+    See pop-up documentation at
+    http://links.esri.com/flexviewer/popups
+-->

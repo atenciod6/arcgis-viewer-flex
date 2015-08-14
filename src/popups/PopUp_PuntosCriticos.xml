@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>Puntos críticos 2014</title>
+    <fields>
+        <field name="NOM_RIO" alias="Río:" visible="true"/>
+        <field name="DPTO" alias="Departamento:" visible="true"/>
+        <field name="PROV" alias="Provincia:" visible="true"/>
+        <field name="DIST" alias="Distrito:" visible="true"/>
+        <field name="LOCAL" alias="Local:" visible="true"/>
+    </fields>
+</configuration>
+
+<!--
+    Pop-up configuration file for:
+    http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0
+
+    See pop-up documentation at
+    http://links.esri.com/flexviewer/popups
+-->

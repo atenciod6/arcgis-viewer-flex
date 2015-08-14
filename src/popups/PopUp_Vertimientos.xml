@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>{TIPO_EFLUENTE}</title>
+    <fields>
+        <field name="RAZON_SOCIAL" alias="Razón social:" visible="true"/>
+        <field name="NUMERO_RESOLUCION_VIGENTE" alias="Resolución vigente:" visible="true"/>
+        <field name="FECHA_RESOLUCION" alias="Fecha resolución:" visible="true"/>
+        <field name="VIGENCIA" alias="Vigencia(años):" visible="true"/>
+    </fields>
+</configuration>
+
+<!--
+    Pop-up configuration file for:
+    http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0
+
+    See pop-up documentation at
+    http://links.esri.com/flexviewer/popups
+-->

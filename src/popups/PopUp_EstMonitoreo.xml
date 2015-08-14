@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>{CLASE_EFLU}</title>
+    <fields>
+        <field name="EMPRESA" alias="Empresa:" visible="true"/>
+        <field name="PUNTO" alias="Punto:" visible="true"/>
+        <field name="TIPO_EFLUE" alias="Tipo efluente:" visible="true"/>
+        <field name="TIPO_PUNTO" alias="Tipo punto:" visible="true"/>
+        <field name="SITUACION_" alias="Situación:" visible="true"/>
+    </fields>
+</configuration>
+
+<!--
+    Pop-up configuration file for:
+    http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0
+
+    See pop-up documentation at
+    http://links.esri.com/flexviewer/popups
+-->

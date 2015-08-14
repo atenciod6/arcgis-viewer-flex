@@ -15,7 +15,7 @@
 <!--     <zoomscale>20000</zoomscale> -->
 <!--     <query>1=1</query> -->
 
-<layer>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_tematicos/MapServer/13</layer>
+<layer>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer/14</layer>
     <query/>
     <titlefield>NAME</titlefield>
     <linkfield/>

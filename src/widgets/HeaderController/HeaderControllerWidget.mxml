@@ -460,7 +460,7 @@
              width="100%" height="85">
 		
         <s:Group id="headerContent"
-                 width="40%" height="{headerGroup.height - 45}">
+                 width="600" height="{headerGroup.height - 45}">
 <!--            <s:Rect width="100%" height="100%"
                     alpha="{getStyle('contentBackgroundAlpha')}">
                 <s:fill>
@@ -469,9 +469,9 @@
             </s:Rect>-->
 				
 			<!--Fondo creado desde fxg en fireworks para Geohidro-->
-			<s:Path id="top_left_bg"
-					width="100%"
-					winding="evenOdd" data="M 0 0 C 0 0 0 0 0 0 C 0 0 0 2 0 2 C 0 1 0 1 0 0 Z M 102 0 C 102 0 0 0 0 0 C 0 1 0 1 0 2 C 0 2 0 240 0 240 C 0 240 1 240 1 240 C 48 228 45 180 47 94 C 49 26 120 56 264 56 C 412 56 526 41 539 8 C 539 7 542 1 540 0 C 540 0 102 0 102 0 Z " blendMode="normal" alpha="0.8">
+			<s:Path id="top_left_bg" width="100%" alpha="0.8" blendMode="normal"
+					data="M 0 0 C 0 0 0 0 0 0 C 0 0 0 2 0 2 C 0 1 0 1 0 0 Z M 102 0 C 102 0 0 0 0 0 C 0 1 0 1 0 2 C 0 2 0 240 0 240 C 0 240 1 240 1 240 C 48 228 45 180 47 94 C 49 26 120 56 264 56 C 412 56 526 41 539 8 C 539 7 542 1 540 0 C 540 0 102 0 102 0 Z "
+					winding="evenOdd">
 				<s:fill>
 					<s:SolidColor color="#39628c"/>
 				</s:fill>
@@ -495,15 +495,11 @@
                           width="100%"
                           resize="arrangeHeadingsAndWidgets()"
                           verticalAlign="middle">
-                    <s:VGroup id="headingGroup"
-                              height="{headerContent.height}"
-                              gap="0"
-                              minWidth="100"
-                              verticalAlign="middle">
-                        <components:AutoFontLabel id="bannerTitle"
-                                                  maxWidth="{headingWidth}"
-                                                  styleName="BannerTitle"
-                                                  textChanged="arrangeHeadingsAndWidgets()"/>
+                    <s:VGroup id="headingGroup" height="{headerContent.height}" minWidth="100"
+							  gap="0" horizontalAlign="left" verticalAlign="middle">
+                        <components:AutoFontLabel id="bannerTitle" maxWidth="{headingWidth}"
+												  styleName="BannerTitle" textAlign="center"
+												  textChanged="arrangeHeadingsAndWidgets()"/>
 
                         <components:AutoFontLabel id="bannerSubtitle"
                                                   maxWidth="{headingWidth}"

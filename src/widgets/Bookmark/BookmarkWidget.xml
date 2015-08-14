@@ -1,6 +1,8 @@
 <?xml version="1.0" ?>
 <configuration>
-    <bookmarks>
+     <bookmarks>
+        <bookmark name="Nevado Coropuna">-8096376.654929327 -1758051.3032233627 -8071305.309651824 -1745515.630584611</bookmark>
+        <bookmark name="Embalse Poechos">-8985186.12422338 -526878.6280363047 -8935043.433668373 -501807.28275880165</bookmark>
     </bookmarks>
 </configuration>
 

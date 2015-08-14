@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>{NOM_VEDA}</title>
+    <fields>
+        <field name="FECHA" alias="Fecha:" visible="true"/>
+        <field name="RESOLUCION" alias="Resolución:" visible="true"/>
+        <field name="DESCRIPCION" alias="Descripción:" visible="true"/>
+    </fields>
+</configuration>
+
+<!--
+    Pop-up configuration file for:
+    http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0
+
+    See pop-up documentation at
+    http://links.esri.com/flexviewer/popups
+-->

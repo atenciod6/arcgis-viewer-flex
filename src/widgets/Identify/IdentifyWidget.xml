@@ -44,24 +44,210 @@
         <copylabel>Copiar resultado a portapapeles</copylabel>
     </labels>
     <layers onlythese="false">
+        
         <layer>
-            <name>Clasificación cuerpos agua</name>
+            <name>Vertimientos autorizados</name>
             <id>2</id>
-            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematico/MapServer</url>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="RAZON_SOCIAL" alias="Razón social"/>
+                <field name="TIPO_EFLUENTE" alias="Tipo efluente"/>
+                <field name="NUMERO_RESOLUCION_VIGENTE" alias="Resolución vigente"/>
+                <field name="FECHA_RESOLUCION" popuponly="true" alias="Fecha resolución"/>
+                <field name="VIGENCIA" alias="Vigencia(años)"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>true</forcescale>
+        </layer>
+        
+        
+       	<layer>
+            <name>Clasificación cuerpos agua</name>
+            <id>1</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
             <fields>
                 <field name="NOMBRE" alias="Nombre"/>
                 <field name="CODE_RIO" alias="Código de río"/>
                 <field name="TIPO" alias="Tipo"/>
                 <field name="CUERPOAGUA" alias="Cuerpo de agua"/>
                 <field name="CATEGORIA" alias="Categoría"/>
-                <field name="CLASE" popuponly="true" alias="Clase"/>
             </fields>
             <links/>
             <zoomscale>2000</zoomscale>
             <forcescale>false</forcescale>
         </layer>
+        
+        <layer>
+            <name>Veda hídrica</name>
+            <id>6</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="NOM_VEDA" alias="Nombre"/>
+                <field name="FECHA" alias="Fecha"/>
+                <field name="RESOLUCION" alias="Resolución"/>
+                <field name="DESCRIPCION" alias="Descripción"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer>
+        
+        <layer>
+            <name>Humedal</name>
+            <id>8</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="Nombre" alias="Nombre"/>
+                <field name="Codigo" alias="Código"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer>
+        
+        <layer>
+            <name>Manantial</name>
+            <id>9</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="NOMBRE" alias="Nombre"/>
+                <field name="CAUD_SAL" alias="Caudal de salida (l/s)"/>
+                <field name="codigo" alias="Código"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer>
+        
+        <layer>
+            <name>Cochas</name>
+            <id>10</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="NOMBRE" alias="Nombre"/>
+                <field name="CODIGO" alias="Código"/>
+                <field name="AREA_KM2" alias="Área(km2)"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer>
+        
+        <layer>
+            <name>Puntos críticos 2014</name>
+            <id>4</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="DPTO" alias="Departamento"/>
+                <field name="PROV" alias="Provincia"/>
+                <field name="DIST" alias="Distrito"/>
+                <field name="LOCAL" alias="Local"/>
+                <field name="NOM_RIO" alias="Río"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer>
+        
+        <layer>
+            <name>Estaciones monitoreo</name>
+            <id>5</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="CLASE_EFLU" alias="Clase efluente"/>
+                <field name="EMPRESA" alias="Empresa"/>
+                <field name="PUNTO" alias="Punto"/>
+                <field name="TIPO_EFLUE" alias="Tipo efluente"/>
+                <field name="TIPO_PUNTO" alias="Tipo punto"/>
+                <field name="SITUACION_" alias="Situación"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer> 
+        
+        <layer>
+            <name>Estaciones Hidrometereológica</name>
+            <id>17</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="Nombre" alias="Nombre"/>
+                <field name="ESTADO" alias="Estado"/>
+                <field name="INSTI_OPER" alias="Operador"/>
+                <field name="RIO" alias="Río"/>
+                <field name="CODIGO" alias="Código"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer>
+        
+        <layer>
+            <name>Bocatomas</name>
+            <id>12</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="NOMBRE" alias="Nombre"/>
+                <field name="PRO_ESP" alias="Proyecto"/>
+                <field name="Q_M3S" alias="Caudal(m3/s)"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer> 
+        
+        <layer>
+            <name>Pozos</name>
+            <id>13</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="TIP_POZO" alias="Tipo"/>
+                <field name="ESTADO_PO" alias="Estado"/>
+                <field name="ACUIFERO" alias="Acuífero"/>
+                <field name="CODIGO" alias="Código"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer> 
+        
+        <layer>
+            <name>Presas</name>
+            <id>14</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="NAME" alias="Nombre"/>
+                <field name="RIO" alias="Río"/>
+                <field name="LUGAR" alias="Lugar"/>
+                <field name="TIPO" alias="Tipo"/>
+                <field name="OPERADOR" alias="Operador"/>
+                <field name="CAPAC_HM" alias="Capacidad (hm3)"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer> 
+        
+        <layer>
+            <name>Canales</name>
+            <id>15</id>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer</url>
+            <fields>
+                <field name="NOMBRE" alias="Nombre"/>
+                <field name="ESTADO" alias="Estado"/>
+                <field name="PRO_ESP" alias="Proyecto"/>
+                <field name="Q_MS" alias="Caudal (m3/s)"/>
+            </fields>
+            <links/>
+            <zoomscale>2000</zoomscale>
+            <forcescale>false</forcescale>
+        </layer> 
+        
         <excludelayer id="35" url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_CARTOGRAFIA_BASE_UTM18S/MapServer"/>
         <excludelayer id="36" url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_CARTOGRAFIA_BASE_UTM18S/MapServer"/>
+        <excludelayer id="37" url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_CARTOGRAFIA_BASE_UTM18S/MapServer"/>
+    
     </layers>
     
 <!--     <layers onlythese="false"> -->

@@ -5,7 +5,7 @@
     <layers>
         <layer>
             <name>Presas</name>
-            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_tematicos/MapServer/13</url>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer/14</url>
             <textsearchlabel>Seleccionar por atributo</textsearchlabel>
             <titlefield>NAME</titlefield>
             <fields>
@@ -17,7 +17,7 @@
         </layer>
         <layer>
             <name>Estaciones Hidrometeorologícas</name>
-            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_tematicos/MapServer/8</url>
+            <url>http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer/17</url>
             <textsearchlabel>Seleccionar por atributo</textsearchlabel>
             <titlefield>Nombre</titlefield>
             <fields>

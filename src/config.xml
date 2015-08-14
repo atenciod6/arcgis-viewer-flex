@@ -8,13 +8,12 @@
 -->
 <configuration>
 
-       <title>..:: GeoHidro v2.0 ::..</title>
+       <title>..:: GeoHidro ::..</title>
     <subtitle>Sistema Nacional de Información de Recursos Hídricos</subtitle>
     <logo>assets/images/logoSnirhWhite.png</logo>
     <style>
         <colors>0xcee7f4,0x39628c,0x355d89,0x294867,0xcee7f4</colors>
         <alpha>0.8</alpha>
-        <font name="Arial Rounded MT Bold"/>
         <titlefont name="Arial TUR"/>
         <subtitlefont name="Arial TUR"/>
     </style>
@@ -35,11 +34,8 @@
 	<widget right="133" top="8" url="widgets/Geocoder/GeocoderWidget.swf" config="widgets/Geocoder/GeocoderWidget.xml"/>
 	<widget url="widgets/Splash/SplashWidget.swf" config="widgets/Splash/SplashWidget.xml" label="Presentación"/>
 	
-	
     <map scalebarvisible="true" scalebar="metric" wraparound180="true" initialextent="-10147168.37891106 -1972553.8902864712 -6451285.1872672 -101375.43786585354" wkid="102100" top="0" addarcgisbasemaps="true"
     attributionvisible="true" esrilogovisible="false" >
-    
-    
     
     <basemaps>
    <layer type="tiled" label="Calles" icon="https://www.arcgis.com/sharing/rest/content/items/04e903465a3e497aa669212e08927cee/info/thumbnail/world_street_map.jpg" url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" visible="true"/>
@@ -59,7 +55,7 @@
 			<layer label="Cartografía base" type="dynamic" visible="true" imageformat="png8"
         			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_CARTOGRAFIA_BASE_UTM18S/MapServer"/>
 
-        	<layer label="Fuentes externas" type="dynamic" visible="false" imageformat="png8" alpha="0.5"
+        	<layer label="Otras fuentes" type="dynamic" visible="false" imageformat="png8" alpha="0.5"
         			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_FUENTES_EXTERNAS/MapServer" />
 <!--         	<layer type="dynamic" label="Imágenes satelitales" copyright="" imageformat="png8" url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/SERV_IMAGEN_RAPIDEYE/MapServer" visible="false"> -->
 <!--                 <sublayer id="3" popupconfig="popups/PopUp_2010.xml"/> -->
@@ -71,15 +67,25 @@
         			<sublayer id="0" popupconfig="popups/PopUp_glaciares.xml"/>
         			<sublayer id="1" popupconfig="popups/PopUp_lagunasgla.xml"/>
         	</layer>
-<!-- Se comentó esta sección hasta que se revise la cartografía del ALA -->
-<!--         	<layer label="Estudios regionales" type="dynamic" visible="false" imageformat="png8" -->
-<!--         			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/AlaCa%C3%B1ete/ServicioAlaCa%C3%B1ete/MapServer" /> -->
+        	<layer label="Estudios regionales" type="dynamic" visible="false" imageformat="png8"
+        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/EstudiosRegionales/SrvEstudiosRegionales/MapServer" />
         	<layer label="Estudios temáticos" type="dynamic" visible="false" imageformat="png8"
-        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematico/MapServer" >
-        		<sublayer id="15" popupconfig="popups/PopUp_Presas.xml"/>
+        			url="http://geosnirh.ana.gob.pe:6080/arcgis/rest/services/GeoHidroV2/GH2_Tematicos/MapServer" >
+        		<sublayer id="1" popupconfig="popups/PopUp_Clasificacion.xml"/>
+        		<sublayer id="2" popupconfig="popups/PopUp_Vertimientos.xml"/>
+        		<sublayer id="4" popupconfig="popups/PopUp_PuntosCriticos.xml"/>
+        		<sublayer id="5" popupconfig="popups/PopUp_EstMonitoreo.xml"/>
+        		<sublayer id="6" popupconfig="popups/PopUp_Vedas.xml"/>
+        		<sublayer id="8" popupconfig="popups/PopUp_Humedales.xml"/>
+        		<sublayer id="9" popupconfig="popups/PopUp_Manantial.xml"/>
+        		<sublayer id="10" popupconfig="popups/PopUp_Cochas.xml"/>
+        		<sublayer id="12" popupconfig="popups/PopUp_Bocatomas.xml"/>
+        		<sublayer id="13" popupconfig="popups/PopUp_Pozos.xml"/>
+        		<sublayer id="14" popupconfig="popups/PopUp_Presas.xml"/>
+        		<sublayer id="15" popupconfig="popups/PopUp_Canales.xml"/>
+        		<sublayer id="17" popupconfig="popups/PopUp_EstHidro.xml"/>
             </layer>
         </operationallayers>
-   
     </map>
 
     <!-- widgets organized into widget containers that manage close/open etc -->
@@ -102,10 +108,10 @@
       </widgetgroup>
       
       <widgetgroup label="Complementos" icon="assets/images/i_globe.png">
-<!--         <widget label="Servicios WMS" left="200" top="200" -->
-<!--         		config="widgets/Services/ServicesWidget.xml" -->
-<!--         		url="widgets/Services/ServicesWidget.swf" -->
-<!--         		icon="assets/images/i_layers.png"/> -->
+        <widget label="Servicios WMS" left="200" top="200"
+        		config="widgets/Services/ServicesWidget.xml"
+        		url="widgets/Services/ServicesWidget.swf"
+        		icon="assets/images/i_layers.png"/>
         <widget label="Perfil de elevación" right="200" top="300"
         		config="widgets/ElevationProfile/ElevationProfileWidget.xml"
         		url="widgets/ElevationProfile/ElevationProfileWidget.swf"
@@ -151,7 +157,11 @@
       </widgetgroup>
       
       <widgetgroup label="Ayuda" icon="assets/images/i_help.png">
-      	<widget label="ArcGIS Online"
+      	<widget label="Manual de usuario"
+        		icon="assets/images/edit_genericdocument.png"
+        		config="widgets/Link/LinkWidget_PDF.xml"
+        		url="widgets/Link/LinkWidget.swf"/>
+      	<widget label="ArcGIS Online ANA"
         		icon="assets/images/i_globe.png"
         		config="widgets/Link/LinkWidget_AGOL.xml"
         		url="widgets/Link/LinkWidget.swf"/>
@@ -164,12 +174,6 @@
         		config="widgets/SplashContacto/SplashContactoWidget.xml"
         		url="widgets/SplashContacto/SplashContactoWidget.swf"/>
       </widgetgroup>
-
-<!--Este widget es para capturar las coordendas del click -->
-<!-- 		<widget label="Escala" left="300" top="500" -->
-<!--                 icon="assets/images/i_facebook.png" -->
-<!--                 config="widgets/Samples/TestWidget/TestWidget.xml" -->
-<!--                 url="widgets/Samples/TestWidget/TestWidget.swf"/> -->
-  
+     
     </widgetcontainer>
 </configuration>
